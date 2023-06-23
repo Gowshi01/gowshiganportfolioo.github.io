@@ -286,7 +286,7 @@ background: none;
    padding-top:10px;
 font-size:25px;
 }
-p{
+.p{
 text-align:justify;
 }
 .services .title::before,

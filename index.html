@@ -82,7 +82,7 @@
 		 </div>	</a></div>
 <div class="column right">
                     <div class="text">Step into the realm of my skill library,</div>
-                    <p> A realm where innovation thrives and possibilities abound. It's a curated collection of my diverse abilities, meticulously crafted over time. From the foundational stones of HTML5, CSS3, and JavaScript to the artistry of front-end and back-end development, my skills weave together seamlessly. Guided by the principles of intuitive UX/UI design and armed with problem-solving prowess, I create digital wonders that adapt and inspire. Delve into my skill library and unlock a world where innovation and creativity converge, waiting to be explored.</p>             
+                    <p "style= text-align:justify;"> A realm where innovation thrives and possibilities abound. It's a curated collection of my diverse abilities, meticulously crafted over time. From the foundational stones of HTML5, CSS3, and JavaScript to the artistry of front-end and back-end development, my skills weave together seamlessly. Guided by the principles of intuitive UX/UI design and armed with problem-solving prowess, I create digital wonders that adapt and inspire. Delve into my skill library and unlock a world where innovation and creativity converge, waiting to be explored.</p>             
             </div>
                 </div>
 
@@ -235,23 +235,22 @@ var body = 'Name: '+name + '<br> Email: '+ email + '<br> Subject: ' +
 
 subject + '<br> Message: ' + message;
 
-Email.send({
-    Host: "smtp.elasticemail.com",
-
-Username: "techlad29@gmail.com",
-
-Password: "6B624D7C3A9F1336E3A802C8F5875C833C0D",
-
-To: "gowshielangovan@gmail.com",
-
-From: email,
-
-Subject: subject,
-
-Body: body
+<script>
+var send = function() {
+    Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "techlad29@gmail.com",
+    Password : "6B624D7C3A9F1336E3A802C8F5875C833C0D
+",
+    To : 'techlad29@gmail.com',
+    From : document.getElementById("email").value,
+	port='2525',
+    Subject : "New Signup!!!",
+    Body : "And this is the body"
 }).then(
-  message => alert(message)
+  message => alert("collaborated Successfully!")
+	console.log(message)
 );
-})
-</script>
+}};
+    </script>
 </html>

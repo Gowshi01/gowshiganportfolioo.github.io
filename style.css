@@ -277,6 +277,7 @@ background: none;
     font-weight: 600;
     margin-bottom: 5px;
 	 color: #fff;
+	text-align:justify;
 }
 .services, .teams{
     color:#fff;

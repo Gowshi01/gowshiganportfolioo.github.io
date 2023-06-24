@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -184,7 +185,7 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form method="post" >
+                    <form method="post" id="contactForm">
                         <div class="fields">
                             <div class="field name">
                                 <input type="text" id="name" placeholder="Name" required>
@@ -202,55 +203,72 @@
                         <div class="button-area">
                             <button id="btn" Onclick="Email.send()">Send message</button>
                         </div>
-                    </form>
+                    </form><div id="response"></div>
                 </div>
             </div>
         </div>
     </section>
-</body>
+
     <!-- footer section start -->
     <footer>
         <span>Designed By <a href="#">Gowshi</a> | <span class="far fa-copyright"></span> 2023 All rights reserved.</span>
     </footer>
 
-    <script src="script.js"></script>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+// Initialize EmailJS with your user ID
+emailjs.init('ConnGLa4Surw37Mae'); // Replace with your EmailJS user ID
 
-var btn = document.getElementById('btn');
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form submission
 
-btn.addEventListener('click', function(e) {
+  // Get form values
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var subject = document.getElementById('subject').value;
+  var message = document.getElementById('message').value;
 
-e.preventDefault()
+  // Prepare email parameters
+  var templateParams = {
+    from_name: name,
+    from_email: email,
+    to_name: 'Gowshigan', // Replace with the recipient's name
+    subject: subject,
+    message: message
+  };
 
-var name = document.getElementById('name').value;
+  // Send email using EmailJS
+  emailjs.send('service_hhto36s', 'template_o3og7h9', templateParams)
+    .then(function(response) {
+      console.log('Email sent successfully!', response.status, response.text);
+      // Reset the form
+      document.getElementById('contactForm').reset();
+      // Display success message
+      document.getElementById('response').textContent = 'Email sent successfully!';
+    }, function(error) {
+      console.error('Error sending email:', error);
+      // Display error message
+      document.getElementById('response').textContent = 'Error sending email.';
+    });
+});
+</script>
 
-var email = document.getElementById('email').value;
 
-var subject = document.getElementById('subject').value;
 
-var message = document.getElementById('message').value;
 
-var body = 'Name: '+name + '<br> Email: '+ email + '<br> Subject: ' +
 
-subject + '<br> Message: ' + message;
 
-<script>
-var send = function() {
-    Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "techlad29@gmail.com",
-    Password : "6B624D7C3A9F1336E3A802C8F5875C833C0D
-",
-    To : 'techlad29@gmail.com',
-    From : document.getElementById("email").value,
-	port='2525',
-    Subject : "New Signup!!!",
-    Body : "And this is the body"
-}).then(
-  message => alert("collaborated Successfully!")
-	console.log(message)
-);
-}};
-    </script>
-</html>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+   

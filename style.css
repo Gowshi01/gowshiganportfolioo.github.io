@@ -279,10 +279,10 @@ background: none;
 .services .services-content .right{
     width: 55%;
 }
-.services .services-content .right .text{
+.services .services-content .right .text {
     font-size: 25px;
     margin-bottom: 5px;
-	 color: #fff;
+	color: #fff;
 	text-align:justify;
 	padding-top:5px;
 }
@@ -292,8 +292,10 @@ background: none;
 }
 .t{
    padding-top:10px;
-font-size:25px;
-font-weight: 550;
+   font-size:25px;
+}
+p{
+	text-align:justify;
 }
 
 .services .title::before,

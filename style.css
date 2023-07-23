@@ -230,7 +230,7 @@ background: none;
     width: 45%;
 }
 .about .about-content .left img{
-    height: 400px;
+    height: 450px;
     width: 400px;
     object-fit: cover;
     border-radius: 6px;
@@ -269,6 +269,11 @@ background: none;
 }
 
 /* services section styling */
+.left .card{
+  float: left;
+  width: 45%;
+}
+
 .services .services-content .right{
     width: 55%;
 }
@@ -278,8 +283,9 @@ background: none;
     margin-bottom: 5px;
 	 color: #fff;
 	text-align:justify;
+	padding-top:5px;
 }
-.services, .teams{
+.services{
     color:#fff;
     background: #111;
 }
@@ -287,8 +293,8 @@ background: none;
    padding-top:10px;
 font-size:25px;
 }
-.p{
-text-align:justify;
+.p{text-align:justify;
+font-weight:600;
 }
 .services .title::before,
  .title::before{
@@ -301,14 +307,15 @@ text-align:justify;
 	color: #29fd53;
 }
 .services .serv-content .card{
-    width: calc(33% - 20px);
+    width: 325px;
+	height:325px;
     background: #222;
     text-align: center;
     border-radius: 6px;
     padding: 50px 25px;
     cursor: pointer;
     transition: all 0.3s ease;
-    float: left;
+	margin-left:25px;
 }
 .services .serv-content .card:hover{
     background: #29fd53;
@@ -330,7 +337,7 @@ text-align:justify;
 .services .serv-content .card .text{
     font-size: 25px;
     font-weight: 500;
-    margin: 49px 0 7px 0;
+    margin: 45px 0 7px 0;
 }
 
 /* skills section styling */
@@ -593,18 +600,21 @@ footer span a:hover{
     .max-width{
         max-width: 930px;
     }
-    .about .about-content .column{
+    .about .about-content .column,
+	.services .services-content .column{
         width: 100%;
     }
-    .about .about-content .left{
+    .about .about-content .left,
+	.services .serv-content .left{
         display: flex;
         justify-content: center;
         margin: 0 auto 60px;
     }
-    .about .about-content .right{
+    .about .about-content .right,
+	.services .services-content .right{
         flex: 100%;
     }
-    .services .serv-content .card{
+    .services .services-content .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
@@ -663,4 +673,20 @@ footer span a:hover{
         line-height: 38px;
     }
 }
-
+@media only screen and (max-width: 1200px) {
+  .card {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  
+  .serv-content {
+    padding: 0.5em 1.2em;
+  }
+  .card {
+    margin: 0;
+  }
+  .card{
+    width: 50%;
+  }
+}

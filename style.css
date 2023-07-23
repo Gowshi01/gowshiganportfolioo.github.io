@@ -182,19 +182,21 @@ section .title::after{
 }
 .home .home-content .text-1{
     font-size: 27px;
+	font-weight:650;
 }
 .home .home-content .text-2{
     font-size: 75px;
-    font-weight: 600;
+    font-weight: 1200;
     margin-left: -3px;
 }
 .home .home-content .text-3{
     font-size: 40px;
+	font-weight:600;
     margin: 5px 0;
 }
 .home .home-content .text-3 span{
     color: #29fd53;
-    font-weight: 500;
+    font-weight: 600;
 }
 .home .home-content a{
     display: inline-block;
@@ -203,7 +205,7 @@ section .title::after{
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
-    font-weight: 400;
+    font-weight: 600;
     border-radius: 6px;
     border: 2px solid #29fd53;
     transition: all 0.3s ease;
@@ -256,7 +258,7 @@ background: none;
     background: #29fd53;
     color: #fff;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
@@ -279,7 +281,6 @@ background: none;
 }
 .services .services-content .right .text{
     font-size: 25px;
-    font-weight: 600;
     margin-bottom: 5px;
 	 color: #fff;
 	text-align:justify;
@@ -292,16 +293,14 @@ background: none;
 .t{
    padding-top:10px;
 font-size:25px;
+font-weight: 550;
 }
-.p{text-align:justify;
-font-weight:600;
-}
+
 .services .title::before,
  .title::before{
     background: #fff;
 }
-.services .title::after,
-.teams .title::after{
+.services .title::after{
     background: #111;
     content: "what i Design";
 	color: #29fd53;
@@ -337,7 +336,7 @@ font-weight:600;
 .services .serv-content .card .text{
     font-size: 25px;
     font-weight: 500;
-    margin: 45px 0 7px 0;
+    margin: 10px 0 7px 0;
 }
 
 /* skills section styling */
@@ -367,7 +366,7 @@ color: #fff;
     background: #29fd53;
     color: #fff;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     padding: 8px 16px;
     margin-top: 20px;
     border-radius: 6px;
@@ -388,7 +387,7 @@ color: #fff;
     justify-content: space-between;
 }
 .skills .skills-content .right span{
-    font-weight: 500;
+    font-weight: 600;
     font-size: 18px;
 color: #fff;
 }
@@ -461,9 +460,10 @@ color:#fff;
 .contact .contact-content .row i{
     font-size: 25px;
     color: #29fd53;
+	font-weight: 600;
 }
 .contact .contact-content .info .head{
-    font-weight: 500;
+    font-weight: 600;
 color:#fff;
 }
 .contact .contact-content .info .sub-title{
@@ -523,6 +523,7 @@ color:#fff;
   background: #29fd53;
   border: 2px solid #29fd53;
   transition: all 0.3s ease;
+  font-weight: 600;
 }
 .right form .button-area button:hover{
   color: #29fd53;
@@ -534,10 +535,12 @@ footer{
     padding: 15px 23px;
     color: #fff;
     text-align: center;
+	font-weight: 600;
 }
 footer span a{
     color: #29fd53;
     text-decoration: none;
+	
 }
 footer span a:hover{
     text-decoration: underline;

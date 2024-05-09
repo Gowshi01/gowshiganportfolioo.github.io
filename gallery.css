@@ -57,27 +57,27 @@ body {
 
 .slide:first-child {
   background: url("https://i.postimg.cc/PJzf93Q2/IMG-20230501-WA0013.jpg/1600x900") no-repeat
-    center top/contain;
+    center center/contain;
 }
 
 .slide:nth-child(2) {
   background: url("https://i.postimg.cc/66zDbxdF/Web-capture-1-5-2023-19467.jpg/1600x900") no-repeat
-    center top/cover;
+center center/contain;
 }
 
 .slide:nth-child(3) {
   background: url("https://i.postimg.cc/8cVPyQM7/IMG-20230501-WA0014.jpg/1600x900") no-repeat
-    center top/cover;
+    center center/contain;
 }
 
 .slide:nth-child(4) {
   background: url("https://i.postimg.cc/c1QJvCGw/IMG-20230501-WA0012.jpg/1600x900") no-repeat
-    center top/cover;
+    center center/contain;
 }
 
 .slide:nth-child(5) {
   background: url("https://i.postimg.cc/nz2wWqQq/Web-capture-27-4-2023-195623.jpg/1600x900") no-repeat
-    center top/cover;
+    center center/contain;
 }
 
 .slide:nth-child(6) {
@@ -124,22 +124,22 @@ body {
 .buttons button#prev {
   position: absolute;
   top: 50%;
-  left: 1rem;
+  left: 2rem;
 }
 
 .buttons button#next {
   position: absolute;
   top: 50%;
-  right: 1rem;
+  right: 2rem;
 }
 
 .buttons button {
-  border: 2px solid #e5ebf3;
+  border: 5px solid #e5ebf3;
   background-color: transparent;
   color: #e5ebf3;
   cursor: pointer;
   padding: 13px 15px;
-  border-radius: 50%;
+  border-radius: 60%;
   outline: none;
 }
 

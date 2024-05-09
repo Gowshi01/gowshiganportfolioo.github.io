@@ -35,11 +35,12 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .skills, .teams, .contact, footer{
+.about, .services, .skills, .edu,  .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
 .services .serv-content,
+.edu .edu-content,
 .skills .skills-content,
 .contact .contact-content{
     display: flex;
@@ -223,9 +224,13 @@ h2{
 color: #fff;
 
 }
+.about .title::before{
+    background: #fff;
+}
+
 .about .title::after{
     content: "who i am";
-background: none;
+	background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
 	color: #29fd53;
 }
 .about .about-content .left{
@@ -272,14 +277,14 @@ background: none;
 
 /* services section styling */
 .left .card{
-  float: left;
   width: 45%;
 }
 
-.services .services-content .right{
+.services .serv-content .right{
     width: 55%;
 }
-.services .services-content .right .text {
+.services .serv-content .right .text {
+	display: inline-block;
     font-size: 25px;
     margin-bottom: 5px;
 	color: #fff;
@@ -298,8 +303,7 @@ p{
 	text-align:justify;
 }
 
-.services .title::before,
- .title::before{
+.services .title::before{
     background: #fff;
 }
 .services .title::after{
@@ -308,15 +312,15 @@ p{
 	color: #29fd53;
 }
 .services .serv-content .card{
-    width: 325px;
-	height:325px;
+	width: calc(63% - 12px);
+	height:260px;
     background: #222;
     text-align: center;
-    border-radius: 6px;
+    border-radius: 10px;
     padding: 50px 25px;
     cursor: pointer;
     transition: all 0.3s ease;
-	margin-left:25px;
+	margin-left: 35px;
 }
 .services .serv-content .card:hover{
     background: #29fd53;
@@ -347,11 +351,11 @@ background: #191919;
 }
 .skills .title::after{
     content: "what i know";
-background: none;
+background: #191919;
 color: #29fd53;
 }
 .skills .skills-content .column{
-    width: calc(50% - 30px);
+    width: calc(50% - 10px);
 }
 .skills .skills-content .left .text{
     font-size: 20px;
@@ -416,24 +420,86 @@ color: #fff;
 .skills-content .right .js::before{
     width: 60%;
 }
-.skills-content .right .php::before{
+.skills-content .right .ds::before{
     width: 50%;
 }
 .skills-content .right .mysql::before{
     width: 40%;
 }
-.skills-content .right .c::before{
-    width: 40%;
+.skills-content .right .python::before{
+    width: 80%;
 }
+
+
+/* edu section styling */
+    .edu {
+        background-color: #101010 ;
+        color: #ffffff;
+        padding: 40px 0;
+    }
+	h4{
+  font-size: 3vmin;
+  margin: auto;
+  margin-top: 12px;
+  color: #fff;
+  text-shadow: 0 0 1px #29fd53, 0 0 1px #29fd53, 0 0 1px #29fd53,
+    0 0 1px #29fd53, 0 0 1px #29fd53;
+}
+	
+.edu .title::before{
+    background: #fff;
+}
+.edu .title::after{
+    background: #191414 ;
+    content: "what i studied";
+	color: #29fd53;
+}
+    .edu-content {
+        
+        margin-top: 40px;
+    }
+    .column {
+        flex: 1;
+    }
+    .leftt {
+        padding-right: 20px;
+    }
+    .rightt {
+        padding-left: 20px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    ul li {
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    p {
+        margin: 5px 0;
+    }
+
+    .edu-text {
+        font-size: 18px;
+    }
 
 /* contact section styling */
 .contact{
     background: #0f0f0f;
 }
+.contact .title::before{
+    background: #fff;
+}
 .contact .title::after{
     content: "get in touch";
 color: #29fd53;
-background: none;
+background: #0f0f0f;
 }
 .contact .contact-content .column{
     width: calc(50% - 30px);
@@ -552,9 +618,20 @@ footer span a:hover{
 /* responsive media query start */
 @media (max-width: 1104px) {
     .about .about-content .left img{
-        height: 350px;
+        height: 450px;
         width: 350px;
     }
+	.services .serv-content .left .card{
+		display: flex;
+		align-items: left;
+		float: left;
+		height: 280px;
+		width: 300px;
+	}
+	.t{
+		padding-top: 8px;
+		font-size: 19px;
+	}
 }
 
 @media (max-width: 991px) {
@@ -606,7 +683,7 @@ footer span a:hover{
         max-width: 930px;
     }
     .about .about-content .column,
-	.services .services-content .column{
+	.services .serv-content .column{
         width: 100%;
     }
     .about .about-content .left,
@@ -616,15 +693,16 @@ footer span a:hover{
         margin: 0 auto 60px;
     }
     .about .about-content .right,
-	.services .services-content .right{
+	.services .serv-content .right{
         flex: 100%;
     }
-    .services .services-content .card{
-        width: calc(50% - 10px);
+    .services .serv-content .card{
+		width: calc(50% - 10px);
         margin-bottom: 20px;
     }
     .skills .skills-content .column,
     .contact .contact-content .column{
+		flex:100%;
         width: 100%;
         margin-bottom: 35px;
     }
@@ -656,6 +734,7 @@ footer span a:hover{
         font-size: 27px;
     }
     .about .about-content .right .text,
+	.services .serv-content .right .text,
     .skills .skills-content .left .text{
         font-size: 19px;
     }
@@ -678,20 +757,14 @@ footer span a:hover{
         line-height: 38px;
     }
 }
-@media only screen and (max-width: 1200px) {
-  .card {
-    width: 40%;
-  }
-}
-@media only screen and (max-width: 768px) {
-  
-  .serv-content {
-    padding: 0.5em 1.2em;
-  }
-  .card {
-    margin: 0;
-  }
-  .card{
-    width: 50%;
-  }
+
+@media screen and (max-width: 768px) {
+    .edu-content {
+        flex-direction: column;
+    }
+
+    .column {
+        padding: 0;
+        margin-bottom: 20px;
+    }
 }

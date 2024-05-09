@@ -349,7 +349,7 @@ p{
 background: #191919;
 }
 .skills .title::before{
-    background: #fffff;
+    background: #ffffff;
 }
 .skills .title::after{
     content: "what i know";

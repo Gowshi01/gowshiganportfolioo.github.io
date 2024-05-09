@@ -348,8 +348,8 @@ p{
 .skills{
 background: #191919;
 }
-.about .title::before{
-    background: #fff;
+.skills .title::before{
+    background: #fffff;
 }
 .skills .title::after{
     content: "what i know";

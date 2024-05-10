@@ -122,7 +122,7 @@ center center/contain;
     center center/contain;
 }
 .slide:nth-child(16) {
-  background: url('https://i.postimg.cc/50thpJ15/bfit-demo.gif') no-repeat center center/cover;
+  background: url('https://i.postimg.cc/50thpJ15/bfit-demo.gif') no-repeat center center/contain;
 }
 
 .buttons button#prev {
@@ -168,4 +168,4 @@ center center/contain;
   .slide.current .content {
     transform: translateX(600px);
   }
-}
+} 

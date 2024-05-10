@@ -2,7 +2,7 @@ const slides = document.querySelectorAll(".slide");
 const nextButton = document.getElementById("next");
 const prevButton = document.getElementById("prev");
 const auto = true;
-const intervalTime = 5000;
+const intervalTime = 10000;
 let slideInterval;
 
 const nextSlide = () => {
@@ -32,6 +32,7 @@ nextButton.addEventListener("click", () => {
     slideInterval = setInterval(nextSlide, intervalTime);
   }
 });
+
 prevButton.addEventListener("click", () => {
   prevSlide();
   if (auto) {
@@ -42,4 +43,19 @@ prevButton.addEventListener("click", () => {
 
 if (auto) {
   slideInterval = setInterval(nextSlide, intervalTime);
+}
+
+// Handling the 16th slide to display for 180 seconds
+if (slides.length >= 16) { // Check if the 16th slide exists
+  slides[15].classList.add("current"); // Show the 16th slide
+  if (auto) {
+    setTimeout(() => {
+      slides[15].classList.remove("current"); // Hide the 16th slide after 180 seconds
+      nextSlide(); // Move to the next slide
+      if (auto) {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, intervalTime); // Resume auto-advancing slides
+      }
+    }, 180000); // 180 seconds
+  }
 }
